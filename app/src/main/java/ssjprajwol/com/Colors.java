@@ -15,26 +15,25 @@ public class Colors extends AppCompatActivity {
 
                 ArrayList<Word> words = new ArrayList<Word>();
 
-                words.add(new Word("Seto", "White"));
-                words.add(new Word("Kalo", "Black"));
-                words.add(new Word("Nilo", "Blue"));
-                words.add(new Word("Pahelo", "Yellow"));
-                words.add(new Word("Rato", "Red"));
-                words.add(new Word("Hariyo", "Green"));
-                words.add(new Word("Suntala", "Orange"));
-                words.add(new Word("Khairo", "Brown"));
-                words.add(new Word("Gulabi", "Pink"));
-                words.add(new Word("Baijani", "Purple"));
-                words.add(new Word("Kharani", "Grey"));
-                words.add(new Word("Chadi", "Silver"));
-                words.add(new Word("Sunaulo", "Gold"));
+                words.add(new Word("Seto", "White",R.drawable.color_white));
+                words.add(new Word("Kalo", "Black",R.drawable.color_black));
+                words.add(new Word("Pahelo", "Yellow",R.drawable.color_mustard_yellow));
+                words.add(new Word("Rato", "Red",R.drawable.color_red));
+                words.add(new Word("Hariyo", "Green",R.drawable.color_green));
+                words.add(new Word("Dhulo Pahelo", "Dusty Yellow",R.drawable.color_dusty_yellow));
+                words.add(new Word("Khairo", "Brown",R.drawable.color_brown));
+                words.add(new Word("Gulabi", "Pink",R.drawable.color_pink));
+                words.add(new Word("Baijani", "Purple",R.drawable.color_purple));
+                words.add(new Word("Kharani", "Grey",R.drawable.color_gray));
+                words.add(new Word("Chadi", "Silver",R.drawable.color_silver));
+                words.add(new Word("Sunaulo", "Gold",R.drawable.color_gold));
 
 
         /*TextView wordView = new TextView(this);
         wordView.setText(words.get(0));
         rootView.addView(wordView);*/
 
-                WordAdapter adapter = new WordAdapter(this, words);
+                WordAdapter adapter = new WordAdapter(this, words,R.color.category_colors);
 
                 ListView listView = (ListView) findViewById(R.id.list);
 

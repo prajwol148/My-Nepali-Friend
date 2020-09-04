@@ -28,6 +28,7 @@ public class Phrases extends AppCompatActivity {
         words.add(new Word("Malai sancho chaina", "I feel sick"));
         words.add(new Word("tapaaiilaaii bhetera khushii laagyo", "Pleased to meet you"));
         words.add(new Word("tapain le nepalima ... lai kasari bhannu hunchha?", "How do you say ... in Nepali?"));
+        words.add(new Word("Ma .... bata aayeko hun", "I came from ..."));
 
 
 
@@ -35,7 +36,7 @@ public class Phrases extends AppCompatActivity {
         wordView.setText(words.get(0));
         rootView.addView(wordView);*/
 
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words,R.color.category_phrases);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
