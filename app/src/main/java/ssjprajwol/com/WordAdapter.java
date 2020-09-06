@@ -1,6 +1,7 @@
 package ssjprajwol.com;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
     private int mColorResourceId;
+
 
     public WordAdapter(Activity context, ArrayList<Word> words, int ColorResourceId){
 
@@ -45,8 +47,12 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         if(currentWord.hasImage()) {
             imageView.setImageResource(currentWord.getImageResourceId());
+            imageView.setVisibility(View.VISIBLE);
         }
         else{
+
+
+
             imageView.setVisibility(View.GONE);
         }
         // Set the theme color for the list item
@@ -55,6 +61,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
 //        int color = ContextCompat.getColor(getContext(), mColorResourceId);
         int color = ContextCompat.getColor(getContext(),mColorResourceId);
         textContainer.setBackgroundColor(color);
+
+
 
         return listItemView;
     }
