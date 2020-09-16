@@ -21,7 +21,14 @@
             android:label="@string/category_numbers" />
         <activity
             android:name="ssjprajwol.com.FamilyMembers"
-            android:label="@string/category_family" />
+            android:label="@string/category_family"
+            android:parentActivityName=".MainActivity">
+
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity"/>
+        </activity>
         <activity
             android:name="ssjprajwol.com.Colors"
             android:label="@string/category_colors" />
